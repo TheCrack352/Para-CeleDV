@@ -10,7 +10,7 @@ export default function HiCele() {
   const allMessages = [
     {
       titulo: "Holaa Cele✨",
-      mensaje: "Por favor abrílo el 21 y sola 👉👈",
+      mensaje: "👉👈 Por favor abrílo el 21 y sola",
       boton: "Abrir",
     },
     {
@@ -26,7 +26,7 @@ export default function HiCele() {
     {
       titulo: "💌",
       mensaje:
-        "Primero lo primero,espero que hoy tengas un día muy lindo y que no te falten motivos para sonreír 😄​",
+        "Primero lo primero, espero que hoy tengas un día muy lindo y que no te falten motivos para sonreír 😄​",
       boton: "Siguiente",
     },
     {
