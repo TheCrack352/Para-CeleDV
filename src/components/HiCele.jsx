@@ -1,28 +1,51 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 export default function HiCele() {
   const [messageNum, setMessageNum] = useState(0);
   const [showFlowers, setShowFlowers] = useState(false);
   const [flowerStage, setFlowerStage] = useState(0);
 
+  const audioRef = useRef(null);
+
   const allMessages = [
     {
       titulo: "Holaa Cele✨",
-      mensaje: "Por favor abrílo el 21 👉👈",
+      mensaje: "Por favor abrílo el 21 y sola 👉👈",
       boton: "Abrir",
     },
     {
       titulo: "💌",
-      mensaje:
-        "Quería regalarte algo, aunque sea de una forma distinta y ademas espero que hoy tengas un día muy lindo y que no te falten motivos para sonreír 😉",
+      mensaje: "Quería regalarte algo pero de una forma distinta 😉",
+      boton: "Siguiente",
+    },
+    {
+      titulo: "💌",
+      mensaje: "Sii, ya sé que la música es muy obvia 🙃​",
       boton: "Siguiente",
     },
     {
       titulo: "💌",
       mensaje:
-        "Me gusta mucho compartir partidas, charlas y esos ratitos en los que coincidimos 🫣",
+        "Primero lo primero,espero que hoy tengas un día muy lindo y que no te falten motivos para sonreír 😄​",
       boton: "Siguiente",
     },
+    {
+      titulo: "💌",
+      mensaje:
+        "Para la Streamer mas hermosa y copada del planeta, que siempre me hace reír y me alegra el día con sus partidas ​⭐​",
+      boton: "Siguiente",
+    },
+    {
+      titulo: "💌",
+      mensaje: "Sii, hablo de vos Cele 🫵​",
+      boton: "Siguiente",
+    },
+    /*{
+      titulo: "💌",
+      mensaje:
+        "Me gusta mucho compartir partidas, charlas y esos ratitos en los que coincidimos 🫣",
+      boton: "Siguiente",
+    },*/
     {
       titulo: "🎁",
       mensaje: "Esto es para voss, espero que te saque una hermosa sonrisa 🫶",
@@ -30,7 +53,23 @@ export default function HiCele() {
     },
   ];
 
+  /*const changeMessage = () => {
+    if (messageNum < allMessages.length - 1) {
+      setMessageNum((prev) => prev + 1);
+    } else {
+      setShowFlowers(true);
+    }
+  };*/
+
   const changeMessage = () => {
+    // Inicia la música en el primer botón
+    if (messageNum === 0 && audioRef.current) {
+      console.log("Intentando reproducir la música...");
+      audioRef.current.play().catch(() => {
+        console.log("El navegador bloqueó la reproducción.");
+      });
+    }
+
     if (messageNum < allMessages.length - 1) {
       setMessageNum((prev) => prev + 1);
     } else {
@@ -43,19 +82,19 @@ export default function HiCele() {
 
     const seedTimer = setTimeout(() => {
       setFlowerStage(1);
-    }, 2200);
+    }, 2500);
 
     const stemTimer = setTimeout(() => {
       setFlowerStage(2);
-    }, 3700);
+    }, 5000);
 
     const leavesTimer = setTimeout(() => {
       setFlowerStage(3);
-    }, 4800);
+    }, 7000);
 
     const flowersTimer = setTimeout(() => {
       setFlowerStage(4);
-    }, 6000);
+    }, 9300);
 
     return () => {
       clearTimeout(seedTimer);
@@ -67,6 +106,9 @@ export default function HiCele() {
 
   return (
     <div className="min-h-screen flex items-center justify-center p-6 bg-gradient-to-br from-violet-950 via-purple-900 to-fuchsia-950">
+      <audio ref={audioRef} loop>
+        <source src="/FloresAmarillas.mp3" type="audio/mpeg" />
+      </audio>
       <div className="w-full max-w-2xl rounded-3xl shadow-2xl p-8 text-center">
         {!showFlowers ? (
           <>
@@ -145,7 +187,7 @@ export default function HiCele() {
             {flowerStage === 1 && (
               <div className="flex flex-col items-center">
                 <h1 className="text-3xl font-serif !text-white mb-10">
-                  Esperá un poquito...
+                  Esperá un poquito más...
                 </h1>
 
                 <div className="text-6xl animate-bounce">🌱</div>
@@ -278,7 +320,7 @@ export default function HiCele() {
                 </h1>
 
                 <p className="text-white font-bold text-lg mb-5 py-2">
-                  Felizz díaa Celee!
+                  Felizz díaa Celee✨
                 </p>
 
                 <svg
