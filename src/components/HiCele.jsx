@@ -107,7 +107,7 @@ export default function HiCele() {
   return (
     <div className="min-h-screen flex items-center justify-center p-6 bg-gradient-to-br from-violet-950 via-purple-900 to-fuchsia-950">
       <audio ref={audioRef} loop>
-        <source src="/FloresAmarillas.mp3" type="audio/mpeg" />
+        <source src={`${import.meta.env.BASE_URL}FloresAmarillas.mp3`} type="audio/mpeg" />
       </audio>
       <div className="w-full max-w-2xl rounded-3xl shadow-2xl p-8 text-center">
         {!showFlowers ? (
