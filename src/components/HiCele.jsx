@@ -10,7 +10,7 @@ export default function HiCele() {
   const allMessages = [
     {
       titulo: "Holaa Cele✨",
-      mensaje: "👉👈 Por favor abrílo el 21 y sola",
+      mensaje: "👉👈 Por favor abrílo el 21",
       boton: "Abrir",
     },
     {
@@ -32,12 +32,12 @@ export default function HiCele() {
     {
       titulo: "💌",
       mensaje:
-        "Para la Streamer mas hermosa y copada del planeta, que siempre me hace reír y me alegra el día con sus partidas ​⭐​",
+        "Para la Streamer mas hermosa y copada del universo, que siempre me hace reír y me alegra el día con sus partidas ​⭐​",
       boton: "Siguiente",
     },
     {
       titulo: "💌",
-      mensaje: "Sii, hablo de vos Cele 🫵​",
+      mensaje: "Sii, hablo de vos Cele 🩷​",
       boton: "Siguiente",
     },
     /*{
@@ -107,7 +107,7 @@ export default function HiCele() {
   return (
     <div className="min-h-screen flex items-center justify-center p-6 bg-gradient-to-br from-violet-950 via-purple-900 to-fuchsia-950">
       <audio ref={audioRef} loop>
-        <source src={`${import.meta.env.BASE_URL}FloresAmarillas.mp3`} type="audio/mpeg" />
+        <source src="/FloresAmarillas.mp3" type="audio/mpeg" />
       </audio>
       <div className="w-full max-w-2xl rounded-3xl shadow-2xl p-8 text-center">
         {!showFlowers ? (
@@ -172,7 +172,7 @@ export default function HiCele() {
                 </h1>
 
                 <p className="text-white font-bold text-xl">
-                  Llegaste hasta acá ❤️
+                  Llegaste hasta acá 🩷
                 </p>
 
                 <p className="text-white/70 mt-4">Pero todavía falta algo...</p>
@@ -231,7 +231,7 @@ export default function HiCele() {
                   />
 
                   {/* Capullo */}
-                  <circle cx="90" cy="70" r="18" fill="#FACC15" />
+                  <circle cx="90" cy="70" r="18" fill="#EC4899" />
                 </svg>
               </div>
             )}
@@ -316,7 +316,7 @@ export default function HiCele() {
             {flowerStage === 4 && (
               <div className="flex flex-col items-center animate-fade-in">
                 <h1 className="text-4xl font-serif !text-white mb-3">
-                  Para voss 💛
+                  Para voss 🩷
                 </h1>
 
                 <p className="text-white font-bold text-lg mb-5 py-2">
@@ -410,7 +410,7 @@ export default function HiCele() {
                         cy="82"
                         rx="11"
                         ry="27"
-                        fill="#FFD43B"
+                        fill="#EC4899"
                         transform={`rotate(${i * 30} 70 100)`}
                       />
                     ))}
@@ -439,7 +439,7 @@ export default function HiCele() {
                         cy="57"
                         rx="10"
                         ry="25"
-                        fill="#FFE066"
+                        fill="#F9A8D4"
                         transform={`rotate(${i * 30} 115 75)`}
                       />
                     ))}
@@ -466,7 +466,7 @@ export default function HiCele() {
                         cy="35"
                         rx="12"
                         ry="30"
-                        fill="#FFD43B"
+                        fill="#EC4899"
                         transform={`rotate(${i * 25.7} 160 55)`}
                       />
                     ))}
@@ -495,7 +495,7 @@ export default function HiCele() {
                         cy="57"
                         rx="10"
                         ry="25"
-                        fill="#FFE066"
+                        fill="#F9A8D4"
                         transform={`rotate(${i * 30} 205 75)`}
                       />
                     ))}
@@ -522,7 +522,7 @@ export default function HiCele() {
                         cy="87"
                         rx="11"
                         ry="27"
-                        fill="#FFD43B"
+                        fill="#EC4899"
                         transform={`rotate(${i * 30} 250 105)`}
                       />
                     ))}
